@@ -17,6 +17,7 @@
       background-color: #f2f2f2;
     }
     .form {
+      padding-bottom: 2pc;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -48,18 +49,22 @@
     .form input[type="submit"]:hover {
       background-color: #3e8e41;
     }
-    .qr-code {
-      margin-top: 50px;
-      display: none;
-    }
   </style>
 </head>
 <body>
+  <div>
+    <h1 align="center">QR Code Generator</h1>
+  </div>
   <div class="container">
-    <form class="form" method="POST" action="/">
+    <form class="form" method="POST">
       <input type="text" name="url" placeholder="Enter URL" id="url">
       <input type="submit" value="Create QR Code">
     </form>
+    {% if data %}
+    <img src="{{data}}" alt="" />
+    <p>Your Qr code is ready.</p>
+    <p>Tip: Right click and save to download.</p>
+    {% endif %}
   </div>
 </body>
 </html>

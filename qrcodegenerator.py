@@ -16,4 +16,4 @@ def generate(url):
 	img = qr.make_image(fill_color = 'red',
 						back_color = 'white')
 
-	img.save('MyQRC.png')
+	return img
