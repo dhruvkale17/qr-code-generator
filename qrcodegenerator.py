@@ -3,7 +3,6 @@ import qrcode
 
 def generate(url):
 	# Data to encode
-	url = "GeeksforGeeks"
 
 	# Creating an instance of QRCode class
 	qr = qrcode.QRCode(version = 1,
